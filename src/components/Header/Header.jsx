@@ -1,7 +1,15 @@
 import React, { useState } from 'react';
 import { Autocomplete } from '@react-google-maps/api';
-import { AppBar, Toolbar, Typography, InputBase, Box } from '@material-ui/core';
+import {
+  AppBar,
+  Toolbar,
+  Typography,
+  InputBase,
+  Box,
+  Button,
+} from '@material-ui/core';
 import SearchIcon from '@material-ui/icons/Search';
+import GitHubIcon from '@material-ui/icons/GitHub';
 
 import useStyles from './styles';
 
@@ -39,6 +47,14 @@ const Header = ({ setCoordinates }) => {
               />
             </div>
           </Autocomplete>
+          <Button
+            variant="contained"
+            color="primary"
+            endIcon={<GitHubIcon></GitHubIcon>}
+            href="https://github.com/patrick022/Travel-advisor"
+          >
+            Github Repo
+          </Button>
         </Box>
       </Toolbar>
     </AppBar>
